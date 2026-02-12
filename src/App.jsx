@@ -14,7 +14,7 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 function App(props) {
   const [filter, setFilter] = useState("All");
-  const apiURL = "http://localhost:8000";
+  const apiURL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
   // Added this
   useEffect(() => {
